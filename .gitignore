@@ -1,0 +1,20 @@
+# ignore everything in .idea
+.idea/
+
+# The doc recommends "share all the .iml module files". except
+!*.iml
+
+# ignore data. It will contain a db
+data/
+
+# ignore all gitignores
+# *.gitignore
+
+
+# ignore node_modules as this contains libs such as express etc for Node
+node_modules/
+
+# ignore sslcert for security
+sslcert/
+
+
