@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        codecam
+    </title>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="stylesheets/video-container.css">
+    <link rel="stylesheet" href="stylesheets/sign-in-popup.css">
+    <link rel="stylesheet" href="stylesheets/handshake-div.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="javascripts/signin.js"></script>
+    <script type="text/javascript" src="javascripts/show-hide-handshake-div.js"></script>
+    <script type="text/javascript" src="javascripts/bundle-webcam.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="handshake-div">
+    <label>Your ID: </label><br/>
+    <textarea id="yourId"></textarea><br/>
+    <label>Other ID: </label><br/>
+    <textarea id="otherId"></textarea><br/>
+    <button id="connect">Connect</button><br/>
+
+</div>
+
+<div id="main-page">
+    <div class="nav-bar">
+        <!-- TODO: Load these from a list of languages the interpreter can handle -->
+        <select id="language-selector">
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+        </select>
+
+        <!--<div id="sign-in-popup">-->
+            <!--<form id="sign-in-form">-->
+                <!--<input type="text" placeholder="username" id="username-input">-->
+                <!--<input type="password" placeholder="password" id="password-input">-->
+                <!--<input type="submit" value="Sign In" id="sign-in-submit">-->
+            <!--</form>-->
+        <!--</div>-->
+        <!-- TODO: little sign in popup with create account. will interact with mongodb -->
+        <button type="button" id="sign-in-button">Sign In</button>
+        <button type="button" id="show-hide-handshake-div">Show/Hide</button>
+
+
+    </div>
+
+    <div class="code-area">
+    <textarea id="code-text-area">
+
+    </textarea>
+    </div>
+
+    <div class="video-container" id="video-container-top-right">
+        <video autoplay="true" class="webcam" id="my-webcam">
+
+
+        </video>
+    </div>
+
+    <div class="video-container" id="video-container-bottom-right">
+        <video autoplay="true" class="webcam" id="your-webcam">
+
+
+        </video>
+    </div>
+</div>
+
+
+</body>
+</html>
