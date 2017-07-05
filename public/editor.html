@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ACE in Action</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="editor">public class Person(){
+    private String name;
+    private int age;
+
+    public Person(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
+    public void setAge(int age){
+        this.age = age;
+    }
+
+
+    public static void main(String[] args){
+        Person carl = new Person("Carl", 23);
+        System.out.println("Name: " + carl.getName());
+        System.out.println("Age:  " + carl.getAge());
+    }
+}
+
+</div>
+
+<script src="javascripts/ace-src/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/java");
+</script>
+</body>
+</html>

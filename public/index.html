@@ -7,16 +7,26 @@
 
     <meta charset="UTF-8">
 
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+    <!------------------------------------------------------------------------------------------------------------->
+
     <link rel="stylesheet" href="stylesheets/video-container.css">
     <link rel="stylesheet" href="stylesheets/sign-in-popup.css">
     <link rel="stylesheet" href="stylesheets/handshake-div.css">
+    <link rel="stylesheet" href="stylesheets/code-text-area.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="javascripts/signin.js"></script>
     <script type="text/javascript" src="javascripts/show-hide-handshake-div.js"></script>
     <script type="text/javascript" src="javascripts/bundle-webcam.js"></script>
-
 
 
 </head>
@@ -28,7 +38,8 @@
     <textarea id="yourId"></textarea><br/>
     <label>Other ID: </label><br/>
     <textarea id="otherId"></textarea><br/>
-    <button id="connect">Connect</button><br/>
+    <button id="connect">Connect</button>
+    <br/>
 
 </div>
 
@@ -41,11 +52,11 @@
         </select>
 
         <!--<div id="sign-in-popup">-->
-            <!--<form id="sign-in-form">-->
-                <!--<input type="text" placeholder="username" id="username-input">-->
-                <!--<input type="password" placeholder="password" id="password-input">-->
-                <!--<input type="submit" value="Sign In" id="sign-in-submit">-->
-            <!--</form>-->
+        <!--<form id="sign-in-form">-->
+        <!--<input type="text" placeholder="username" id="username-input">-->
+        <!--<input type="password" placeholder="password" id="password-input">-->
+        <!--<input type="submit" value="Sign In" id="sign-in-submit">-->
+        <!--</form>-->
         <!--</div>-->
         <!-- TODO: little sign in popup with create account. will interact with mongodb -->
         <button type="button" id="sign-in-button">Sign In</button>
@@ -55,10 +66,52 @@
     </div>
 
     <div class="code-area">
-    <textarea id="code-text-area">
+        <div id="editor-div">
 
-    </textarea>
+
+        </div>
+        <!--<textarea id="code-text-area">-->
+        <!--Enter code here...-->
+
+
+        <!---->
+        <!--</textarea>-->
+        <!--<pre>-->
+            <!--<code class="Java" contenteditable="true" autocorrect="off" autocapitalize="off" spellcheck="false"/>-->
+                <!--class Person(){-->
+                    <!--private String name;-->
+                    <!--private int age;-->
+
+                    <!--public Person(){}-->
+
+                    <!--public Person(String name, int age){-->
+                        <!--this.name = name;-->
+                        <!--this.age = age;-->
+                    <!--}-->
+
+                    <!--public void setName(String name){-->
+                        <!--this.name = name;-->
+                    <!--}-->
+                    <!--public String getName(){-->
+                        <!--return name;-->
+                    <!--}-->
+                    <!--public void setAge(int age){-->
+                        <!--this.age = age;-->
+                    <!--}-->
+                    <!--public int getAge(){-->
+                        <!--return age;-->
+                    <!--}-->
+                <!--}-->
+
+            <!--</code>-->
+        <!--</pre>-->
     </div>
+
+    <script>
+        $(function(){
+            $("#editor-div").load("editor.html");
+        });
+    </script>
 
     <div class="video-container" id="video-container-top-right">
         <video autoplay="true" class="webcam" id="my-webcam">
